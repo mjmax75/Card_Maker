@@ -26,24 +26,20 @@ This is a business card maker project, which has the following features.
 4. The modification will be reflected in real time basis using Firebase
 5. The modification will be saved even though user logs out
 
-<img width="90%" alt="demo_gif" src="/public/images/readme/youtube_demo.gif">
+<img width="90%" alt="demo_gif" src="/public/images/readme/card_demo.gif">
 
-### 🏠 Default Page
+### 🔐 Login Page
 
-<div>
-<img width="45%" alt="default_large_screen" src="/public/images/readme/default_mac.png"> 
-<img width="45%" alt="default_mid_size_screen" src="/public/images/readme/default_mac_smaller.png">
-</div>
+<img width="90%" alt="login_gif" src="/public/images/readme/login.gif">
 
-<div>
-<img width="45%" alt="default_ipad_screen" src="/public/images/readme/default_ipad.png"> 
-<img width="45%" alt="default_small_screen" src="/public/images/readme/default_small.png">
-</div>
+- Can login with Google or Github.
+- The credential will be saved in firebase, so the user will be automatically logged in when returned.
 
-- Receive data from the YouTube API using Postman to display the channel thumbnail, title, channel name, uploaded date of the most popular video as of today
-- The number of videos displayed gets adjusted according to the screen size - Responsive design.
+<img width="90%" alt="login_saved_gif" src="/public/images/readme/login_saved.gif">
 
-### 🔎 Search Page
+- The information on the cards will be saved in firebase even after logout. The user can return for the saved information.
+
+### 📝 Maker Page
 
 <div>
 <img width="45%" alt="search_mac" src="/public/images/readme/search_mac.png"> 

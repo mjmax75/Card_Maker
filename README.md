@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Business Card Maker using React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App that allows you to make a business card.
 
-## Available Scripts
+Demo Link → https://minji-youtube-mini-clone.netlify.app/
 
-In the project directory, you can run:
+## 🗂 Table of Contents
 
-### `yarn start`
+1. [Tech Stack](#1-tech-stack)
+2. [About this Project](#2-about-this-project)
+3. [Structure](#3-structure)
+4. [Improvements](#4-improvements)
+5. [Acknowledgements](#5-acknowledgements)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 1. Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> <img alt="React Router" src ="https://img.shields.io/badge/react router-CA4245.svg?&style=for-the-badge&logo=reactrouter&logoColor=white"/> <img alt="Firebase" src ="https://img.shields.io/badge/Firebase-FFCA28.svg?&style=for-the-badge&logo=firebase&logoColor=white"/> <img alt="Cloudinary" src ="https://img.shields.io/badge/Cloudinary-3448c5.svg?&style=for-the-badge&logo=cloudinary&logoColor=white"/> <img alt="Netlify" src ="https://img.shields.io/badge/Netlify-00c7b7.svg?&style=for-the-badge&logo=netlify&logoColor=white"/>
 
-### `yarn test`
+## 2. About this Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is a mini YouTube Clone project, which has the following features.
 
-### `yarn build`
+1. The default page shows the most popular videos of the day
+2. A user can type in keyword to search the corresponding video
+3. A user can click the video either from the default page or the result from the search to play the video and get the data of the video
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img width="90%" alt="demo_gif" src="/public/images/readme/youtube_demo.gif">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🏠 Default Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<div>
+<img width="45%" alt="default_large_screen" src="/public/images/readme/default_mac.png"> 
+<img width="45%" alt="default_mid_size_screen" src="/public/images/readme/default_mac_smaller.png">
+</div>
 
-### `yarn eject`
+<div>
+<img width="45%" alt="default_ipad_screen" src="/public/images/readme/default_ipad.png"> 
+<img width="45%" alt="default_small_screen" src="/public/images/readme/default_small.png">
+</div>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Receive data from the YouTube API using Postman to display the channel thumbnail, title, channel name, uploaded date of the most popular video as of today
+- The number of videos displayed gets adjusted according to the screen size - Responsive design.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔎 Search Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<div>
+<img width="45%" alt="search_mac" src="/public/images/readme/search_mac.png"> 
+<img width="45%" alt="search_smaller" src="/public/images/readme/search_smaller.png">
+</div>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- When the user types in keywords in the search bar, the application will display the corresponding videos using YouTube API.
 
-## Learn More
+### 📼 Play Video Page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<div>
+<img width="45%" alt="play_mac" src="/public/images/readme/play_mac.png"> 
+<img width="45%" alt="play_smaller" src="/public/images/readme/play_smaller.png">
+</div>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- When the user clicks a thumbnail on the searched list, the page will display the video and the metadata that corresponds the videoid.
 
-### Code Splitting
+## 3. Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Demo Link → https://minji-youtube-mini-clone.netlify.app/
 
-### Analyzing the Bundle Size
+### 🏠 Default page - Most popular videos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<div>
+<img width="100%" alt="default_structure" src="/public/images/readme/default_structure.png">
+</div>
 
-### Making a Progressive Web App
+1. When the <em>App</em> component gets mounted, it will get the most popular videos using YouTube API stored in <em>youtube.js</em> and <em>.env</em>.
+2. The <em>App</em> component will send props to <em>video list</em> and <em>video item</em> component (including number 3).
+3. It will render the <em>video items</em> component in <em>video list</em> component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 🔎 Search Page
 
-### Advanced Configuration
+<div>
+<img width="100%" alt="keyword_structure" src="/public/images/readme/keyword_structure.png">
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. The <em>App</em> component receives the keyword When the user types the keyword in the search input bar.
+2. The <em>App</em> state gets changed.
+3. Using the class function in <em>youtube.js</em>, it will get the corresponding videos.
+4. It will update the <em>video list</em> component.
+5. Then, it will render the <em>video item</em> component.
 
-### Deployment
+### 📼 Play Video Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<div>
+<img width="100%" alt="play_structure" src="/public/images/readme/play_structure.png">
+</div>
 
-### `yarn build` fails to minify
+1. The user clicks one of the video item.
+2. The <em>App</em> component's state gets changed.
+3. Using the class function in <em>youtube.js</em>, it will get the corresponding video url.
+4. It will update the <em>play video</em> component.
+5. Then, it will render the video
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 4. Improvements
+
+Some of the features I would like to work on in the future are 1) infinite scroll function on the default page 2) channel label image on the side of channel title and uploaded date 3) the comments/ number of likes and dislikes/ number of subscribers 4) light and dark mode 5) the loading spinner and much more!
+
+## 5. Acknowledgements
+
+- YouTube Data API
+- Dream Coding

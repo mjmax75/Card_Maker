@@ -2,7 +2,7 @@
 
 App that allows you to make a business card.
 
-Demo Link → https://minji-youtube-mini-clone.netlify.app/
+Demo Link → https://minji-card-maker.netlify.app/
 
 ## 🗂 Table of Contents
 
@@ -55,7 +55,7 @@ This is a business card maker project, which has the following features.
 
 ## 3. Structure
 
-Demo Link → https://minji-youtube-mini-clone.netlify.app/
+Demo Link → https://minji-card-maker.netlify.app/
 
 ### Overall
 

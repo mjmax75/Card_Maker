@@ -60,18 +60,20 @@ Demo Link → https://minji-youtube-mini-clone.netlify.app/
 ### Overall
 
 <div>
-<img width="100%" alt="default_structure" src="/public/images/readme/default_structure.png">
+<img width="100%" alt="card_structure" src="/public/images/readme/card_structure.png">
 </div>
 
-1. When the <em>App</em> component gets mounted, it will get the most popular videos using YouTube API stored in <em>youtube.js</em> and <em>.env</em>.
-2. The <em>App</em> component will send props to <em>video list</em> and <em>video item</em> component (including number 3).
-3. It will render the <em>video items</em> component in <em>video list</em> component.
+1. When the login button is clicked, the login function is processed.
+2. The login gets operated through Firebase, such as verification.
+3. React Router sends the user to <em>Maker</em> page.
+4. (Step 4-6) If the user is a returning user, the user's database will be called back from Firebase & the image from Cloudinary.
+5. (Step 7) The data will be shown in the <em>Editor</em> and <em>Preview</em> section.
+6. (Step 8) When the user makes changes on the <em>Maker</em> page, the data will be updated in Firebase and Cloudinary in realtime.
 
 ## 4. Improvements
 
-Some of the features I would like to work on in the future are 1) infinite scroll function on the default page 2) channel label image on the side of channel title and uploaded date 3) the comments/ number of likes and dislikes/ number of subscribers 4) light and dark mode 5) the loading spinner and much more!
+One of the improvements I am planning to update is the performance improvements using memo() and useCallback() function to fix unnecessary components rendering, such as header, footer, buttons, and etc.
 
 ## 5. Acknowledgements
 
-- YouTube Data API
 - Dream Coding
